@@ -10,11 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//
+//Route::get('/', function () {
+//    return view('welcome',[
+//
+//        'name' => 'Alex'
+//    ]);
+//
+//});
 
-Route::get('/', function () {
-    return view('welcome',[
+Route::get('/', ['uses'=>'HomeController@index', 'as'=>'home']);
+Route::get('message/{id}/edit', ['uses' => 'HomeController@edit', 'as'=>'messege.edit'] );
 
-        'name' => 'Alex'
-    ]);
-
-});
