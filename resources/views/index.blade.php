@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main</title>
+    <title>{{ $title }}</title>
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -14,13 +14,17 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center">Страница новостей</h1>
+    <h1 class="text-center">{{ $pageTitle }}</h1>
+
+    @include('_common._form')
 
     @yield('content')
+
+
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="public/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

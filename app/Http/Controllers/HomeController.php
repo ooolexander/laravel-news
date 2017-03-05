@@ -8,7 +8,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('pages.messages.index');
+        $data = ['title' => 'Новостной сайт', 'pageTitle' => 'Страница новостей'];
+
+        return view('pages.messages.index')->with($data);
     }
     public function edit($id)
     {
