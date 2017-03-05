@@ -20,5 +20,5 @@
 //});
 
 Route::get('/', ['uses'=>'HomeController@index', 'as'=>'home']);
-Route::get('message/{id}/edit', ['uses' => 'HomeController@edit', 'as'=>'messege.edit'] );
+Route::get('message/{id}/edit', ['uses' => 'HomeController@edit', 'as'=>'messege.edit'] )->where(['id' => '[0-9]+']);
 
